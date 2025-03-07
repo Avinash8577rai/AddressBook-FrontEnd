@@ -1,0 +1,40 @@
+
+<div class="container mt-4">
+
+<button type="button" class="btn btn-primary" [routerLink]="['/add-records']">Add User</button>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Fullname</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zip Code</th>
+        <th scope="col">Phone Number</th>
+       
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(item of userData; track $index) {
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.fullName}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.zip}}</td>
+        <td>{{item.phoneNumber}}</td>
+        
+        <td>
+            <span class="action-icons text-primary me-2 d-inline-flex align-items-center" (click)="editUser(item)">✏️</span>
+            <span class="action-icons text-danger d-inline-flex align-items-center" (click)="deleteUser(item.id)">🗑️</span>
+        </td>
+      </tr>
+    }
+
+      
+    </tbody>
+  </table>
+</div>

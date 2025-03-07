@@ -1,0 +1,15 @@
+.fw-bold {
+    font-weight: bold;
+    font-size: 24px; /* Adjust size */
+    color: #007bff; /* Blue color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fw-bold:first-child {
+    color: #310de6; /* Green color for 'ADDRESS' */
+}
+
+.fw-bold:last-child {
+    color: #dc3545; /* Red color for 'BOOK' */
+}
